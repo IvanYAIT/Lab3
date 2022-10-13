@@ -6,8 +6,8 @@ namespace Core
     {
         private const int scorePoint = 5;
         private Score score;
-        private Quit quit;
-        public Game(Score score, Quit quit)
+        private InputListaner quit;
+        public Game(Score score, InputListaner quit)
         {
             this.quit = quit;
             this.score = score;

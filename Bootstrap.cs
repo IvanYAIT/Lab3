@@ -10,7 +10,7 @@ namespace Core
         [SerializeField] private Clicker clicker;
         [SerializeField] private NewClicker newclicker;
         [SerializeField] private ScoreView scoreView;
-        [SerializeField] private InputListaner quit;
+        [SerializeField] private InputListaner inputListaner;
 
         private Score score;
         private Game game;
@@ -18,7 +18,7 @@ namespace Core
         private void Awake()
         {
             score = new Score();
-            game = new Game(score, quit);
+            game = new Game(score, inputListaner);
             scoreView.SetScore(score);
             clicker.SetScore(score);
             newclicker.SetScore(score);

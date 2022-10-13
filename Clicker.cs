@@ -9,12 +9,12 @@ namespace Core
     {
         Score score;
 
-        public void GetScore(Score score)
+        public void SetScore(Score score)
         {
             this.score = score;
         }
 
-        private void AddPointsToScore()
+        private void MinusPointsToScore()
         {
             score.PlayerScore -= 1;
         }
@@ -22,7 +22,7 @@ namespace Core
 
         private void OnMouseDown()
         {
-            AddPointsToScore();
+            MinusPointsToScore();
         }
     }
 }

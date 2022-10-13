@@ -9,7 +9,7 @@ public class ScoreView : MonoBehaviour
     [SerializeField] TextMeshProUGUI textScore;
     private Score score;
 
-    public void GetScore(Score score)
+    public void SetScore(Score score)
     {
         this.score = score;
     }
