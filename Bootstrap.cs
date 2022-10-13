@@ -8,8 +8,9 @@ namespace Core
     public class Bootstrap : MonoBehaviour
     {
         [SerializeField] private Clicker clicker;
+        [SerializeField] private NewClicker newclicker;
         [SerializeField] private ScoreView scoreView;
-        [SerializeField] private Quit quit;
+        [SerializeField] private InputListaner quit;
 
         private Score score;
         private Game game;
@@ -18,8 +19,9 @@ namespace Core
         {
             score = new Score();
             game = new Game(score, quit);
-            scoreView.GetScore(score);
-            clicker.GetScore(score);
+            scoreView.SetScore(score);
+            clicker.SetScore(score);
+            newclicker.SetScore(score);
         }
     }
 }
